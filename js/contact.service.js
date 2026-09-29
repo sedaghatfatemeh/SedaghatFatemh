@@ -1,0 +1,2 @@
+import { SUPABASE_CONFIG } from "./supabase.config.js";
+export async function submitContactMessage(payload){const r=await fetch(SUPABASE_CONFIG.contactFunctionUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const b=await r.json().catch(()=>null);if(!r.ok||!b?.ok){const e=new Error(b?.error?.message??"Contact request failed.");e.requestId=b?.error?.requestId??null;throw e;}return b.data;}
