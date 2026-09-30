@@ -1,0 +1,11 @@
+node_modules/
+supabase/.temp/
+.env
+.env.*
+node_modules/
+supabase/.temp/
+.env
+node_modules/
+supabase/.temp/
+.env
+.env.*
